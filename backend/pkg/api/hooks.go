@@ -105,13 +105,13 @@ func (*defaultHooks) CanCreateTopic(_ context.Context, _ string) (bool, *rest.Er
 	return true, nil
 }
 func (*defaultHooks) CanDeleteTopic(_ context.Context, _ string) (bool, *rest.Error) {
-	return true, nil
+	return false, nil
 }
 func (*defaultHooks) CanPublishTopicRecords(_ context.Context, _ string) (bool, *rest.Error) {
 	return true, nil
 }
 func (*defaultHooks) CanDeleteTopicRecords(_ context.Context, _ string) (bool, *rest.Error) {
-	return true, nil
+	return false, nil
 }
 func (*defaultHooks) CanViewTopicPartitions(_ context.Context, _ string) (bool, *rest.Error) {
 	return true, nil
@@ -146,7 +146,7 @@ func (*defaultHooks) CanEditConsumerGroup(_ context.Context, _ string) (bool, *r
 	return true, nil
 }
 func (*defaultHooks) CanDeleteConsumerGroup(_ context.Context, _ string) (bool, *rest.Error) {
-	return true, nil
+	return false, nil
 }
 func (*defaultHooks) AllowedConsumerGroupActions(_ context.Context, _ string) ([]string, *rest.Error) {
 	// "all" will be considered as wild card - all actions are allowed
@@ -165,7 +165,7 @@ func (*defaultHooks) CanEditConnectCluster(_ context.Context, _ string) (bool, *
 	return true, nil
 }
 func (*defaultHooks) CanDeleteConnectCluster(_ context.Context, _ string) (bool, *rest.Error) {
-	return true, nil
+	return false, nil
 }
 func (*defaultHooks) AllowedConnectClusterActions(_ context.Context, _ string) ([]string, *rest.Error) {
 	// "all" will be considered as wild card - all actions are allowed
